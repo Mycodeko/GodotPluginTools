@@ -23,6 +23,7 @@ def main():
 	project_base_folder_path = Path(args.project_base_folder).expanduser().resolve()
 	addons_folder_path = Path(args.addons_folder).expanduser().resolve()
 	output_folder_path = Path(args.output_folder).expanduser().resolve()
+	output_folder_path.mkdir(parents=True, exist_ok=True)
 
 	license_file_path : Path | None = Path(args.license_file).expanduser().resolve()
 	if not license_file_path.exists():
